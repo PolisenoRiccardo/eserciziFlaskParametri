@@ -13,7 +13,7 @@ def login():
   if  user == 'admin' and password == 'xxx123#':
     genere = request.form['s']
     if genere == 'Male':
-      return render_template("login.html", user = user, ao = genere) 
+      return render_template("login.html", user = user, ao = 'o') 
     elif genere == 'Female':
       return render_template("login.html", user = user, ao = 'a') 
     elif genere == 'FilippoNeri':
