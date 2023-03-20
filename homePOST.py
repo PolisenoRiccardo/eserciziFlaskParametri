@@ -9,8 +9,15 @@ def hello_world():
 def login():
   user = request.form['user']
   password = request.form['pasw']
+
   if  user == 'admin' and password == 'xxx123#':
-    return render_template("login.html", user = user) 
+    genere = request.form['s']
+    if genere == 'Male':
+      return render_template("login.html", user = user, ao = genere) 
+    elif genere == 'Female':
+      return render_template("login.html", user = user, ao = 'a') 
+    elif genere == 'FilippoNeri':
+      return render_template("login.html", user = user, ao = 'ǝ')
   else:
     return render_template("errore.html") 
 
